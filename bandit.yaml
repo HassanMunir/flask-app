@@ -1,0 +1,27 @@
+# Bandit configuration file
+
+# Files and directories to exclude
+exclude_dirs:
+  - tests
+  - migrations
+
+# Severity levels to report
+severity:
+  - LOW
+  - MEDIUM
+  - HIGH
+
+# Confidence levels to report
+confidence:
+  - LOW
+  - MEDIUM
+  - HIGH
+
+# Specific checks to exclude
+skips:
+  - B101 # assert used
+  - B102 # exec used
+
+# List of tests to skip globally
+skip:
+  - B309 # Use of insecure pickle
