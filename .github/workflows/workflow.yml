@@ -51,3 +51,7 @@ jobs:
         run: |
           flake8 app
           black app
+
+      - name: Run pytest
+        run: |
+          pytest tests --maxfail=1 --cov=app --disable-warnings --verbose
