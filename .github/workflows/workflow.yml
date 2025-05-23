@@ -82,3 +82,9 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t $IMAGE_TAG -t $IMAGE_TAG_LATEST .
+
+      - name: Scan image
+        uses: anchore/scan-action@v6
+        with:
+          image: "${{ env.IMAGE_TAG_LATEST }}"
+          fail-build: false
