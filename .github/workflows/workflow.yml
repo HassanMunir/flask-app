@@ -46,3 +46,8 @@ jobs:
       - name: Run Bandit for SAST
         run: |
           bandit -r app -c bandit.yaml
+
+      - name: Run Flake8 & Black Code Formatter
+        run: |
+          flake8 app
+          black app
