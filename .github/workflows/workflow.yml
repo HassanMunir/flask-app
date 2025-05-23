@@ -55,3 +55,9 @@ jobs:
       - name: Run pytest
         run: |
           pytest tests --maxfail=1 --cov=app --disable-warnings --verbose
+
+      - name: Run pytest with coverage
+        run: |
+          coverage run -m pytest
+          coverage report
+          coverage html
